@@ -1,0 +1,81 @@
+html {
+      scroll-behavior: smooth;
+     }
+header {width:70%; position:absolute; left:50%;
+        transform:translateX(-50%);
+        margin:60px auto; border-bottom:1px solid black;
+        text-align:right;}
+header h1 {font-size:1.5em;}
+header ul {position: absolute; right:0;}
+header ul li{display: inline-block; width:100px;
+             background: #cccccc; margin-top:1px;
+             text-align: center;
+             border-radius: 0 0 10px 10px;
+             padding:5px; font-size: .8em;
+             cursor: pointer;}
+header ul li:nth-child(1) {background:#097c25; color:white;}
+section {width:70%;
+         position:relative; left:50%; top:150px; transform:translateX(-50%);
+         padding-bottom: 100px; font-weight:200;}
+section ul li{width:32%; margin:0.5%;
+              display:inline-block; overflow: hidden;
+              position: relative; cursor: pointer;}
+section ul li img{width:100%; transition: all 0.5s ease; pointer-events: none;}
+section ul li div {width:100%;
+                   position: absolute; top:0;
+                   background: rgba(0,0,0,0.8);
+                   opacity:0;
+                   transition:all 0.5s ease;
+                   pointer-events: none;}
+section ul li div:hover {opacity:1;}
+section ul li div p {position: absolute; bottom:0; color:white; padding: 20px;}
+
+article {width:80%; height:90vh; background: white;
+        position: fixed; left:50%; top:50%;
+        transform:translate(-50%,-50%); overflow: auto; opacity:0; z-index: -1;
+        text-align: right;}
+.art {font-size:2em; padding:30px; opacity:0; position: fixed; right:5%; top:50%; z-index: 99; color:white;}
+.art:hover {color:#097c25; cursor: pointer;}
+article * {pointer-events: none;}
+
+article figure {width:80%; margin: 50px auto; text-align: center;}
+article figure figcaption { text-align: left;}
+article figure p {font-weight: 300; margin-top:10px;}
+article figure img {max-width:1000px; margin-top: 50px; display:inline-block;}
+article figure iframe {width:80%; height:60vh; margin:50px 0; pointer-events: auto;}
+.big {width:90%;}
+.small {width:30%;}
+i.fa-arrow-up {font-size: 3em; position: fixed; bottom:70px; right:70px;}
+i.fa-arrow-up:hover {color:#097c25; cursor: pointer;}
+
+@media screen and (max-width: 1600px) {
+  header{width:60%;}
+}
+
+@media screen and (max-width: 1024px) {
+  header{width:70%;}
+  header h1 {font-size:2.5vw; }
+  header ul{left:50%; transform:translateX(-50%); width:100%; text-align: center;}
+  header ul li{width:15%; font-size:1.5vw;}
+  section ul li {width:48%;}
+  i.art {width:100%; text-align: center;
+         position: fixed; left:50%; top:90%;
+         transform:translateX(-50%); z-index: 100; }
+  i.fa-arrow-up {display: none;}
+}
+
+@media screen and (max-width: 512px) {
+
+  header h1 {font-size:1.5em; }
+  header ul {display: none;}
+
+  article {width:90%;}
+  article figure {width:95%;}
+  article figure figcaption {margin-bottom: 20px;}
+  article figure iframe {width:100%; height:30vh;}
+  article figure img{width:100%; margin-top:0px;}
+  .small {width:100%;}
+  i.art {width:100%; text-align: center;
+         position: fixed; left:50%; top:90%;
+         transform:translateX(-50%); z-index: 100; }
+}

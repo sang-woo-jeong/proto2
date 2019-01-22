@@ -1,0 +1,36 @@
+nav {position: fixed; width:25%; height:100%;
+     background: white; z-index: 99; left:-100%;;
+     text-align: center; font-size: 2em; line-height: 200%;
+     box-shadow: 5px 5px 5px black;}
+nav i {float: right; padding: 30px;}
+nav i:hover {color:#097c25; cursor: pointer;}
+nav ul {position: absolute; top:50%; left:50%; transform: translate(-50%,-50%);}
+nav ul li {font-weight: 400;}
+nav ul li:hover {font-weight: 800; color:#097c25; cursor: pointer;}
+.menu {position: fixed; top:50px; left:50px; padding: 20px; font-size: 1.2em;
+       z-index: 90;}
+.menu span {margin-left: 20px; letter-spacing: 10px; font-weight:300;}
+.menu:hover {font-weight: bold; color:#097c25; cursor: pointer; transition:all 0.5s ease;}
+.solid {width:100%; height:10px; background: black; position: fixed; z-index: 94;}
+.solidtop {top:0;}
+.solidbottom {bottom:0;}
+.deco {position: absolute; left:40%; top:15%;}
+.naveffect {width:100%; height:100vh;
+            position: fixed;
+            background: black; opacity: 0.0; z-index: 10;
+            pointer-events: none; transition: all ease 0.5s;}
+
+@media screen and (max-width: 1600px) {
+  nav {width:30%;}
+}
+
+@media screen and (max-width: 1024px) {
+  .menu {text-align: center; padding:0;}
+  .menu span {display: none;}
+  nav {width:60%;}
+}
+
+@media screen and (max-width: 512px) {
+  .menu {text-align: center; padding:0;}
+  nav {width:95%;}
+}
